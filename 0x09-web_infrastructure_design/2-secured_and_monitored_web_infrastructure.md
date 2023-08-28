@@ -1,5 +1,6 @@
 # 2-secured_and_monitored_web_infrastructure
 
+![2-secured_and_monitored_web_infrastructure](https://github.com/mbianou-bradon/alx-system_engineering-devops/assets/72765949/821a6a3c-f6ef-4f0d-9578-3a770978938c)
 
 
 [View Board](https://docs.google.com/drawings/d/1jlx12VYUqHCsbFAGWPMDoTAIweCOBeD6B0Srd7JNBtA/edit)
