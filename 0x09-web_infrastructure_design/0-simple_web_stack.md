@@ -1,5 +1,6 @@
 # 0-Simple_Web_Stack
 
+![0-simple_web_stack(1)](https://github.com/mbianou-bradon/alx-system_engineering-devops/assets/72765949/83b83824-7750-49d5-939c-f231ee5535d6)
 
 [view board](https://docs.google.com/drawings/d/1c36jUGSloJQVMbiY48IX4lpfafcNzF8NMAs6mZSUkx0/edit)
 
