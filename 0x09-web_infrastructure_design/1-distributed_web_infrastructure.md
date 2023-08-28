@@ -1,5 +1,6 @@
 # 1-distributed_web_infrastructure
 
+![1-distributed_web_infrastructure(1)](https://github.com/mbianou-bradon/alx-system_engineering-devops/assets/72765949/218c7859-7703-4a71-a1d5-24a00993ab75)
 
 
 [View Board](https://docs.google.com/drawings/d/1wYd5Zj9Fs2wNkXtJ33IlXEsEdYCa4jAQAVplF-xdhgk/edit)
