@@ -1,19 +1,40 @@
-
 #!/usr/bin/python3
-"""Exports to-do list information of all employees to JSON format."""
-import json
-import requests
+"""
+Python script that, using this REST API
+(https://jsonplaceholder.typicode.com/), records all tasks from all
+employees, returns information about his/her TODO list progress and to
+export data in the JSON format.
+"""
 
-if __name__ == "__main__":
-    url = "https://jsonplaceholder.typicode.com/"
-    users = requests.get(url + "users").json()
+if __name__ == '__main__':
+    import requests
+    import json
+    from sys import argv
 
-    with open("todo_all_employees.json", "w") as jsonfile:
-        json.dump({
-            u.get("id"): [{
-                "task": t.get("title"),
-                "completed": t.get("completed"),
-                "username": u.get("username")
-            } for t in requests.get(url + "todos",
-                                    params={"userId": u.get("id")}).json()]
-            for u in users}, jsonfile)
+    ids = set()
+    r = requests.get('https://jsonplaceholder.typicode.com/posts')
+    data = r.json()
+    for user in data:
+        ids.add(user.get('userId'))
+
+    output = {}
+    for user in ids:
+        r = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
+                         format(user))
+        username = r.json().get('username')
+
+        r = requests.get('https://jsonplaceholder.typicode.com/' +
+                         'todos?userId={}'.format(user))
+        data = r.json()
+
+        output['{}'.format(user)] = []
+        for task in data:
+            output['{}'.format(user)].append({
+                'task': task.get('title'),
+                'completed': task.get('completed'),
+                'username': username
+            })
+
+    with open('todo_all_employees.json', 'w') as file:
+        json.dump({int(x): output[x] for x in output.keys()},
+                  file, sort_keys=True)
