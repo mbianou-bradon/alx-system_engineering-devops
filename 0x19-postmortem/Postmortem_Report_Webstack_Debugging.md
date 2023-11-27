@@ -3,7 +3,7 @@
 
 ![504 postmortem report](./504_postmortem-report.gif)
 
-## Incident report for 504 error / Site Outage
+## Incident report for 504 error / [Site Outage](https://github.com/mbianou-bradon/alx-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
 ### Summary
 
 On November 20th, 2023 at midnight the server access went down resulting in 504 error for anyone trying to access a website. Background on the server being based on a LAMP stack.
